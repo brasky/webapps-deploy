@@ -1,6 +1,6 @@
 {
   "name": "webapps-deploy",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Deploy web apps and containerized web apps to Azure",
   "main": "lib/main.js",
   "scripts": {
@@ -36,5 +36,8 @@
     "azure-actions-appservice-rest": "^1.0.9",
     "azure-actions-utility": "^1.0.3",
     "azure-actions-webclient": "^1.0.11"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
