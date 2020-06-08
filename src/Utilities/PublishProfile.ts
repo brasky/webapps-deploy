@@ -22,9 +22,6 @@ export class PublishProfile {
                 password: secrets.getSecret("//publishProfile/@userPWD", true)
             };
             this._appUrl = secrets.getSecret("//publishProfile/@destinationAppUrl", false);
-            if(this._creds.uri.indexOf("scm") < 0) {
-                throw new Error("Publish profile does not contain kudu URL");
-            }
             this._creds.uri = `https://${this._creds.uri}`;
         } catch(error) {
             core.error("Failed to fetch credentials from Publish Profile. For more details on how to set publish profile credentials refer https://aka.ms/create-secrets-for-GitHub-workflows");
